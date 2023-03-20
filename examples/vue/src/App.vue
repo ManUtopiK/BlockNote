@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { reactive, ref, watch } from "vue"
-import BlockNoteView from "@/BlockNoteView.vue"
+import BlockNoteView from "@blocknote/vue"
 import blocks from './blocks.json'
 import type { Block } from "@blocknote/core"
 
