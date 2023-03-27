@@ -1,9 +1,9 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import * as path from "path";
 import { fileURLToPath, URL } from 'node:url'
-import pkg from "./package.json";
-// import eslintPlugin from "vite-plugin-eslint";
+import * as path from "path"
+
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import pkg from "./package.json"
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,7 +16,7 @@ export default defineConfig({
   build: {
     sourcemap: true,
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"),
+      entry: path.resolve(__dirname, "src/main.ts"),
       name: "blocknote-vue",
       fileName: "blocknote-vue",
     },
@@ -31,6 +31,7 @@ export default defineConfig({
       output: {
         // Provide global variables to use in the UMD build
         // for externalized deps
+        exports: 'named',
         globals: {
           vue: "vue"
         },
@@ -38,4 +39,4 @@ export default defineConfig({
       },
     },
   },
-});
+})

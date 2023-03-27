@@ -1,5 +1,5 @@
 import type { BlockSideMenuFactory, BlockSideMenuStaticParams } from "@blocknote/core"
-import type { ComponentInternalInstance, Slots, VNodeProps } from 'vue'
+import type { ComponentInternalInstance } from 'vue'
 import { mount } from '../mount'
 
 import BlockSideMenu from './BlockSideMenu.vue'
